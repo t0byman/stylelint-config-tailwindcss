@@ -2,6 +2,7 @@
 /* stylelint-disable declaration-block-no-shorthand-property-overrides */
 /* stylelint-disable declaration-block-no-redundant-longhand-properties */
 /* stylelint-disable shorthand-property-no-redundant-values */
+/* stylelint-disable declaration-property-value-no-unknown */
 
 /*
  * Directives / import
@@ -76,6 +77,10 @@
 
 	@variant dark {
 		background-color: black;
+	}
+
+	@variant 3xl {
+		background-color: gray;
 	}
 }
 
@@ -152,8 +157,14 @@
 	background: --alpha(black / 50%) url("bg.jpg") padding-box content-box;
 	background: url("bg.jpg") no-repeat center / cover --alpha(red / 50%);
 	background: url("bg.jpg") center / cover no-repeat fixed padding-box content-box --alpha(red / 50%);
-	background: url("bg.jpg") repeat, linear-gradient(to bottom, #fff, #ccc), --alpha(red / 50%);
-	background: url("bg.jpg") repeat fixed, radial-gradient(circle, #fff, #000), --alpha(red / 50%);
+	background:
+		url("bg.jpg") repeat,
+		linear-gradient(to bottom, #fff, #ccc),
+		--alpha(red / 50%);
+	background:
+		url("bg.jpg") repeat fixed,
+		radial-gradient(circle, #fff, #000),
+		--alpha(red / 50%);
 	border: 1px solid --alpha(black / 50%);
 	border: solid --alpha(black / 50%);
 	border-color: --alpha(black / 50%) --alpha(blue / 50%);
@@ -168,8 +179,8 @@
 	outline: solid --alpha(black / 50%);
 	column-rule: 1px solid --alpha(black / 50%);
 	column-rule: solid --alpha(black / 50%);
-	text-emphasis: filled --alpha(black /50%);
-	text-emphasis: filled double-circle --alpha(black /50%);
+	text-emphasis: filled --alpha(black / 50%);
+	text-emphasis: filled double-circle --alpha(black / 50%);
 	text-emphasis: "*" --alpha(black / 50%);
 }
 
@@ -440,4 +451,3 @@
 	backdrop-filter: drop-shadow(1vw --spacing(2) --alpha(black / 50%));
 	backdrop-filter: drop-shadow(1vw 2px --spacing(2) --alpha(black / 50%));
 }
-

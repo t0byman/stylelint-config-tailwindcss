@@ -32,7 +32,7 @@ const stylelintConfig = {
 					prelude: "<any-value>",
 				},
 				"variant": {
-					prelude: "<custom-ident>",
+					prelude: "<any-value>",
 				},
 				"custom-variant": {
 					prelude: "<any-value> | <any-value> <any-value>",
@@ -50,6 +50,12 @@ const stylelintConfig = {
 	rules: {
 		"import-notation": "string",
 		"nesting-selector-no-missing-scoping-root": [true, {
+			ignoreAtRules: [
+				"custom-variant",
+				"utility",
+			],
+		}],
+		"no-invalid-position-declaration": [true, {
 			ignoreAtRules: [
 				"custom-variant",
 				"utility",
